@@ -1,0 +1,103 @@
+================================================================================
+   TRADUÇÃO PORTUGUÊS DO BRASIL (PT-BR) - MIDNIGHT CLUB 3: DUB EDITION REMIX
+                            PC RECOMPILATION (XREVIVE)
+                                   Versão 1.0
+================================================================================
+
+[CRÉDITOS E AUTORIA]
+* Tradução original para PlayStation 2: [refresh] (Tradução V3)
+* Adaptação, engenharia reversa de fontes, conversão para Xbox/PC Recomp,
+  localização de controles Xbox, DLCs e peças do mod MC3-VIP:
+  Engenharia Modding Recomp (2026).
+
+--------------------------------------------------------------------------------
+[CARACTERÍSTICAS DESTA VERSÃO PARA PC]
+--------------------------------------------------------------------------------
+1. COMPATIBILIDADE TOTAL:
+   - Funciona tanto no jogo "puro" (sem mods) quanto com os mods oficiais do PC:
+     * MC3-VIP (28 carros extras com tuning e peças 100% traduzidos - 10.996 linhas)
+     * MC3-HD-HUD (texturas da HUD e fontes em alta resolução 512x512)
+   - Não aciona nenhum erro de validação de integridade ("resource hash mismatch")
+     no addon VIP, pois o manifesto vip-manifest.json é atualizado com o SHA-256
+     exato da tabela traduzida.
+
+2. LOCALIZAÇÃO COMPLETA DE CONTROLES XBOX / TECLADO:
+   - Todos os botões do PS2 (X, Triângulo, Quadrado, Círculo, L1, R2, etc.)
+     foram mapeados para o padrão de botões e gatilhos do Xbox (A, B, X, Y, LB, RB, LT, RT).
+   - Prompts de menus adaptados (ex: "botão BACK", "START: Menu do Editor de Corrida",
+     "Pressione o analógico para pegar o Checkpoint").
+
+3. ACENTUAÇÃO GRÁFICA CORRIGIDA (SEM BUGS DE GLIFOS):
+   - No jogo original de Xbox/PC, a fonte "smallspace" nativa não possui glifos
+     para 'ã' e 'õ'.
+   - Aplicamos um patch nas texturas de fonte (smallspace_05.tex / smallspace_05s.tex)
+     tanto na resolução original (128x128) quanto na versão HD-HUD (512x512),
+     desenhando o til (~) com precisão cirúrgica de pixels. Todas as palavras
+     como "Aceleração", "Opções", "Direção", "Padrão" aparecem perfeitamente acentuadas!
+   - Codepoints especiais de 'ô' (U+00F4) e 'Ô' (U+00D4) nativos do Xbox foram
+     restaurados em mais de 235 strings.
+
+4. TELAS DE CARREGAMENTO (LOADING SCREENS):
+   - Todas as 610 mensagens de dicas e fatos automobilísticos das telas de loading
+     (mcloadstrings.strtbl) traduzidas para PT-BR.
+
+--------------------------------------------------------------------------------
+[COMO INSTALAR]
+--------------------------------------------------------------------------------
+
+MÉTODO 1: INSTALAÇÃO AUTOMÁTICA (RECOMENDADO)
+1. Extraia o conteúdo deste pacote (ou a pasta "Traducao_PTBR_MC3_Recomp")
+   para dentro da pasta raiz do seu Midnight Club 3 Recomp no PC
+   (a pasta onde fica o xrevive.exe ou midnightclub3.exe).
+2. Dê dois cliques no arquivo:
+   INSTALAR_TRADUCAO.bat
+3. O script copiará os arquivos automaticamente para as pastas corretas
+   e garantirá que "loose_files=1" esteja ativo.
+4. Pronto! Abra o jogo e aproveite!
+
+MÉTODO 2: INSTALAÇÃO MANUAL
+Se preferir instalar manualmente sem executar o script:
+1. Copie a pasta "extracted" deste pacote para a raiz do seu jogo, mesclando
+   com a pasta "extracted" existente.
+2. (Se você usa o mod VIP):
+   Copie a pasta "addons/mc3-vip" para a pasta "addons/mc3-vip" do jogo,
+   substituindo o arquivo "vip-manifest.json" e o "mcstrings_x.strtbl".
+3. (Se você usa o mod HD-HUD):
+   Copie a pasta "addons/mc3-hd-hud" para a pasta "addons/mc3-hd-hud" do jogo,
+   substituindo as texturas em "texture_x".
+4. Abra o arquivo "SaveData/Midnight Club 3_ DUB edition/recomp-settings.dat"
+   no Bloco de Notas e certifique-se de que a linha "loose_files=1" está definida.
+   (Ou aperte F10 dentro do jogo e marque "Loose Files").
+
+--------------------------------------------------------------------------------
+[ESTRUTURA DOS ARQUIVOS INCLUÍDOS]
+--------------------------------------------------------------------------------
+Traducao_PTBR_MC3_Recomp/
+│
+├── INSTALAR_TRADUCAO.bat           (Script de 1-clique para instalar)
+├── LEIAME.txt                      (Este guia em texto simples)
+├── README.md                       (Guia formatado com detalhes técnicos)
+│
+├── addons/
+│   ├── mc3-hd-hud/
+│   │   └── texture_x/
+│   │       ├── smallspace_05.tex   (Fonte HD 512x512 com til em ã/õ)
+│   │       └── smallspace_05s.tex  (Sombra da fonte HD 512x512)
+│   └── mc3-vip/
+│       ├── vip-manifest.json       (Manifesto atualizado com hash SHA-256)
+│       └── content/
+│           └── fonts/
+│               └── mcstrings_x.strtbl (10.996 strings traduzidas PT-BR)
+│
+└── extracted/
+    └── fonts/
+        ├── mcloadstrings.strtbl    (Textos de loading traduzidos)
+        ├── mcloadstrings_x.strtbl  (Textos de loading traduzidos)
+        ├── mcstrings_x.strtbl      (Textos base sem VIP traduzidos)
+        └── texture_x/
+            ├── smallspace_05.tex   (Fonte Stock 128x128 com til em ã/õ)
+            └── smallspace_05s.tex  (Sombra da fonte Stock 128x128)
+
+================================================================================
+Bom jogo e boa corrida pelas ruas de Detroit, San Diego, Atlanta e Tokyo!
+================================================================================
